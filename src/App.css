@@ -1,0 +1,21 @@
+
+
+
+
+.main{
+    min-height: 80vh;
+}
+
+.info{
+    background: url('./assets/books.jpg') no-repeat;
+    background-size: cover;
+}
+
+.info > div {
+    background: rgba(0,0,0,0.786);
+    color: rgb(187, 183, 183);
+    padding: 3rem;
+    margin: 2rem;
+    border-radius: 10px;
+
+}   
