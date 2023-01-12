@@ -25,8 +25,8 @@ const Header = () => {
           <Navbar.Brand className="text-white fw-bold ">
             Library Management System
           </Navbar.Brand>
-          <div className="d-flex justify-content-between"> Welcome</div>
-          {user.name}
+          <div className="d-flex justify-content-between"></div>
+
           <Navbar.Toggle />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto gap-4">

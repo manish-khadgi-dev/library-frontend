@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Form, Button, Col, Container, Row } from "react-bootstrap";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Layout from "../components/layout/Layout";
 import { loginUser } from "../helpers/axiosHelper";
@@ -38,8 +38,8 @@ const Login = () => {
   return (
     <Layout>
       <Container>
-        <Row className="mt-5">
-          <Col className="md-6 bg-warning p-4">
+        <Row className="mt-5 ">
+          <Col className="md-6 bg-secondary p-4">
             <div className="bg-light p-4 rounded">
               <Form onSubmit={handleOnSubmit}>
                 <h1 className="text-center">Login</h1>
@@ -73,7 +73,7 @@ const Login = () => {
               </Form>
             </div>
 
-            <div className="text-center mt-3">
+            <div className="text-white mt-3">
               Don't have an account ? <Link to="/register"> Register Here</Link>
             </div>
           </Col>

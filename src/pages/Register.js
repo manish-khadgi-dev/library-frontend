@@ -69,10 +69,14 @@ const Register = () => {
 
   return (
     <Layout>
-      <Container className="bg-info">
+      <Container className="bg-secondary text-white">
         <Row className="mt-5">
-          <Col className="md-6 text-center d-flex align-center d-none d-md-flex info">
-            <div className=""></div>
+          <Col className="md-6 text-center info d-flex align-items-center d-none d-md-flex">
+            <div>
+              <h1>Welcome to our Library Management System</h1>
+              <hr />
+              <p> Login to view and start borrowing books</p>
+            </div>
           </Col>
           <Col>
             <div className="register-form mt-5 p-5 ">
