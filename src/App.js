@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import "react-toastify/dist/ReactToastify.css";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
+import Books from "./pages/Books";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/books" element={<Books />} />
           <Route
             path="*"
             element={

@@ -14,6 +14,7 @@ const Header = () => {
       setUser(userObj);
     }
   }, []);
+  console.log(user);
 
   const handleOnLogout = () => {
     sessionStorage.removeItem("user");
@@ -32,7 +33,7 @@ const Header = () => {
             <Nav className="ms-auto gap-4">
               {user?._id ? (
                 <>
-                  <Link to="/dashboard"> Dashboard </Link>
+                  <h5> Welcome Back {user.fName}</h5>
                   <Link to="/" onClick={handleOnLogout}>
                     Log out
                   </Link>
