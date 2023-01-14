@@ -2,10 +2,12 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({});
   useEffect(() => {
     const userStr = sessionStorage.getItem("user");
@@ -14,16 +16,17 @@ const Header = () => {
       setUser(userObj);
     }
   }, []);
-  console.log(user);
 
   const handleOnLogout = () => {
     sessionStorage.removeItem("user");
+    navigate("/");
   };
+
   return (
     <div>
-      <Navbar bg="dark" className="text-white" expand="lg">
+      <Navbar bg="info" className="text-dark" expand="lg">
         <Container>
-          <Navbar.Brand className="text-white fw-bold ">
+          <Navbar.Brand className=" fw-bold ">
             Library Management System
           </Navbar.Brand>
           <div className="d-flex justify-content-between"></div>
@@ -34,7 +37,7 @@ const Header = () => {
               {user?._id ? (
                 <>
                   <h5> Welcome Back {user.fName}</h5>
-                  <Link to="/" onClick={handleOnLogout}>
+                  <Link to="/" onClick={() => handleOnLogout()}>
                     Log out
                   </Link>
                 </>

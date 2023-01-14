@@ -6,17 +6,24 @@ const Sidebar = () => {
   return (
     <aside>
       <div className="top">
-        <img src={profileImage} alt="profile Image" />
+        <img src={profileImage} alt="profileimg" />
       </div>
       <hr />
 
       <div className="bottom">
         <ul>
           <p className="title">MAIN</p>
-          <Link to="/mybooks" className="link">
+          <Link to="/books" className="link">
             <li>
               <i className="fa-solid fa-book"></i>
               <span>All Books</span>
+            </li>
+          </Link>
+
+          <Link to="/mybooks" className="link">
+            <li>
+              <i className="fa-solid fa-book"></i>
+              <span>My Books</span>
             </li>
           </Link>
 

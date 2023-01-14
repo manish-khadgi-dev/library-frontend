@@ -9,7 +9,7 @@ const DashboardLayout = ({ children }) => {
       <Sidebar />
       <div className="dashboard-main">
         <Header />
-        {children}
+        <div className="content">{children}</div>
         <Footer />
       </div>
     </div>

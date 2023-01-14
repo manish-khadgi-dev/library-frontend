@@ -30,13 +30,16 @@
     display: flex;
     flex-direction: column;
 }
+.content{
+    min-height: 100vh;
+}
 
 
 /* ==========SIDEBAR================ */
 aside{
     flex: 0.5;
     min-height: 100vh;
-    background: darkgray;
+    background:aqua
 }
 .top{
     height: 100px;
@@ -47,8 +50,8 @@ aside{
     margin: 1rem auto;
 }
 .top img{
-    width: 50%;
-    border-radius: 30%;
+    width: 40%;
+    border-radius: 50%;
 }
 
 .bottom ul{
@@ -86,4 +89,32 @@ aside{
     font-weight: 700;
     margin: 1rem 0 0.5rem 0;
     text-decoration: umnderline;
+}
+
+
+/* ===============ADD BOOK PAGE===================== */
+.add .add-top,
+.add-bottom{
+    padding: 2rem;
+    margin: 20px;
+    box-shadow:  2px 4px 10px 1px rgba(201, 201, 201, 0.5);
+}
+
+.add-top{
+    display: flex;
+    justify-content: end;
+}
+
+.add-top h1 {
+    color:rgba(179, 178, 178);
+    font-size: rem;
+}
+
+.add-bottom{
+    display: flex;
+    gap: 1rem;
+}
+
+.add-bottom label{
+    font-weight: 500;
 }
