@@ -118,3 +118,11 @@ aside{
 .add-bottom label{
     font-weight: 500;
 }
+
+.books-list{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

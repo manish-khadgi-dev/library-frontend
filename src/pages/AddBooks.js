@@ -3,18 +3,27 @@ import { Button, Form, Col, Spinner } from "react-bootstrap";
 import DashboardLayout from "../components/layout/DashboardLayout";
 import books from "../assets/books.jpg";
 
+import { toast } from "react-toastify";
+import { addBook } from "../helpers/axiosHelper";
+
 const AddBooks = () => {
   const [formData, setFormData] = useState({});
-  const [isLoading, SetIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault();
-    SetIsLoading(true);
+    setIsLoading(true);
+    const { status, message } = await addBook(formData);
+
+    if (status) {
+      setIsLoading(false);
+      return toast[status](message);
+    }
   };
 
   return (
